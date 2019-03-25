@@ -1,0 +1,148 @@
+{
+  "sushi": [
+    {
+      "id": 1,
+      "name": "Maguro (Tuna)",
+      "image": "./assets/images/1-maguro.png",
+      "sushilevel": "Sushi Novice"
+    },
+    {
+      "id": 2,
+      "name": "Chu-Toro (Med. fat tuna belly)",
+      "image": "./assets/images/2-chu-toro.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 3,
+      "name": "Toro (Fatty tuna belly)",
+      "image": "./assets/images/3-toro.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 4,
+      "name": "Sake (Salmon)",
+      "image": "./assets/images/4-sake.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 5,
+      "name": "Buri (Yellowtail)",
+      "image": "./assets/images/5-buri.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 6,
+      "name": "Hirame(Flounder)",
+      "image": "./assets/images/6-hirame.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 7,
+      "name": "Tai(Red Snapper)",
+      "image": "./assets/images/7-tai.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 8,
+      "name": "Ika(Squid)",
+      "image": "./assets/images/8-ika.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 9,
+      "name": "Amaebi(Deep Water Shrimp)",
+      "image": "./assets/images/9-amaebi.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 10,
+      "name": "Ebi(Cooked Shrimp)",
+      "image": "./assets/images/10-ebi.png",
+      "sushilevel": "Sushi Novice"
+    },
+    {
+      "id": 11,
+      "name": "Tako(Octopus)",
+      "image": "./assets/images/11-tako.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 12,
+      "name": "Hotate(Scallop)",
+      "image": "./assets/images/12-hotate.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 13,
+      "name": "Saba(Mackerel)",
+      "image": "./assets/images/13-saba.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 14,
+      "name": "Anago(Eel, Unagi)",
+      "image": "./assets/images/14-anago.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 15,
+      "name": "Hokkigai(Surf Clam)",
+      "image": "./assets/images/15-hokkigai.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 16,
+      "name": "Tamago(Egg Omelette)",
+      "image": "./assets/images/16-tamago.png",
+      "sushilevel": "Sushi Novice"
+    },
+    {
+      "id": 17,
+      "name": "Ikura(Salmon Roe)",
+      "image": "./assets/images/17-ikura.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 18,
+      "name": "Negitoro(Green Onion & Tuna)",
+      "image": "./assets/images/18-negitoro.png",
+      "sushilevel": "Sushi Veteran"
+    },
+    {
+      "id": 19,
+      "name": "Masago(Smelt Roe)",
+      "image": "./assets/images/19-masago.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 20,
+      "name": "Uni(Sea Urchin)",
+      "image": "./assets/images/20-uni.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 21,
+      "name": "Inari(Fried Tofu Skin)",
+      "image": "./assets/images/21-inari.png",
+      "sushilevel": "Sushi Novice"
+    },
+    {
+      "id": 22,
+      "name": "Kappamaki(Cucumber Roll)",
+      "image": "./assets/images/22-kappamaki.png",
+      "sushilevel": "Sushi Novice"
+    },
+    {
+      "id": 23,
+      "name": "Tekkamaki(Tuna Roll)",
+      "image": "./assets/images/23-tekkamaki.png",
+      "sushilevel": "Sushi Savant"
+    },
+    {
+      "id": 24,
+      "name": "Nattomaki(Fermented Soybn Rl)",
+      "image": "./assets/images/24-nattomaki.png",
+      "sushilevel": "Sushi Savant"
+    }
+  ]
+}
