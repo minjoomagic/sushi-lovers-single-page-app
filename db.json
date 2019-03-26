@@ -151,18 +151,6 @@
       "id": 25
     },
     {
-      "name": "R-money",
-      "image": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-      "sushilevel": "Sushi Savant",
-      "id": 26
-    },
-    {
-      "name": "robby",
-      "image": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-      "sushilevel": "Sushi Novice",
-      "id": 27
-    },
-    {
       "name": "The Fai Z",
       "image": "https://images.unsplash.com/photo-1534482421-64566f976cfa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80",
       "sushilevel": "Sushi Savant",
@@ -199,24 +187,6 @@
       "id": 33
     },
     {
-      "name": "testing",
-      "image": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60",
-      "sushilevel": "Sushi Veteran",
-      "id": 34
-    },
-    {
-      "name": "testing2",
-      "image": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60",
-      "sushilevel": "Sushi Novice",
-      "id": 35
-    },
-    {
-      "name": "testing4",
-      "image": "https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60",
-      "sushilevel": "Sushi Novice",
-      "id": 36
-    },
-    {
       "name": "The Farhan",
       "image": "https://images.unsplash.com/photo-1534476391-1ae99699617b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       "sushilevel": "Sushi Veteran",
@@ -229,10 +199,10 @@
       "id": 38
     },
     {
-      "name": "",
-      "image": "",
-      "sushilevel": "Sushi Novice",
-      "id": 39
+      "name": "The Elizabeth",
+      "image": "https://images.unsplash.com/photo-1546920591-fc8b7c2093ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
+      "sushilevel": "Sushi Veteran",
+      "id": 40
     }
   ]
 }
