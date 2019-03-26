@@ -81,6 +81,8 @@ function renderOneSushi(sushi) {
   `
 }
 
+
+
 // add a new sushi
 const sushiForm = document.querySelector('#sushi-form')
 addSushiForm.addEventListener('submit', function(e){
@@ -149,10 +151,11 @@ document.addEventListener('click', function(e){
             <option>Sushi Savant</option>
           </select>
         </div>
-        <input type="submit" value="<3 Edit this Sushi <3" class="btn btn-warning btn-lg" data-id=${foundSushi.id} id="edit-sushi-submit">
+        <input type="submit" value="❤️ Edit this Sushi ❤️" class="btn btn-warning btn-lg" data-id=${foundSushi.id} id="edit-sushi-submit">
       </form>
       </div>
       `
+      
 
 
       //edit a sushi

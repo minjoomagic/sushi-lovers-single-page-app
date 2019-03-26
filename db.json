@@ -16,7 +16,7 @@
       "id": 3,
       "name": "Toro (Fatty tuna belly)",
       "image": "./assets/images/3-toro.png",
-      "sushilevel": "Sushi Veteran"
+      "sushilevel": "Sushi Novice"
     },
     {
       "id": 4,
@@ -193,7 +193,7 @@
       "id": 37
     },
     {
-      "name": "charlie",
+      "name": "The Charlie",
       "image": "https://images.unsplash.com/photo-1546530785-86397501ae20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80",
       "sushilevel": "Sushi Veteran",
       "id": 38
@@ -201,7 +201,7 @@
     {
       "name": "The Elizabeth",
       "image": "https://images.unsplash.com/photo-1546920591-fc8b7c2093ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
-      "sushilevel": "Sushi Veteran",
+      "sushilevel": "Sushi Savant",
       "id": 40
     }
   ]
