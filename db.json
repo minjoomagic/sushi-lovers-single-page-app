@@ -32,13 +32,13 @@
     },
     {
       "id": 6,
-      "name": "Hirame(Flounder)",
+      "name": "Hirame (Flounder)",
       "image": "./assets/images/6-hirame.png",
       "sushilevel": "Sushi Savant"
     },
     {
       "id": 7,
-      "name": "Tai(Red Snapper)",
+      "name": "Tai (Red Snapper)",
       "image": "./assets/images/7-tai.png",
       "sushilevel": "Sushi Savant"
     },
@@ -128,13 +128,13 @@
     },
     {
       "id": 22,
-      "name": "Kappamaki(Cucumber Roll)",
+      "name": "Kappamaki (Cucumber Roll)",
       "image": "./assets/images/22-kappamaki.png",
       "sushilevel": "Sushi Novice"
     },
     {
       "id": 23,
-      "name": "Tekkamaki(Tuna Roll)",
+      "name": "Tekkamaki (Tuna Roll)",
       "image": "./assets/images/23-tekkamaki.png",
       "sushilevel": "Sushi Savant"
     },

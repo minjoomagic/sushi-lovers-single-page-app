@@ -29,10 +29,6 @@ body {
   width: auto;
 }
 
-.sushi-image:hover {
-  opacity: 0.5;
-}
-
 button {
   position: relative;
   background-color: #e04b52;
@@ -62,14 +58,6 @@ button:hover {
   display: none;
   background: #f7f7f7;
   opacity: .8;
-}
-
-.modal-container {
-  padding: 1rem;
-  width: auto;
-  height: auto;
-  /* display: none; */
-  background: #ffffff;
 }
 
 .add-sushi-form {
@@ -110,11 +98,15 @@ button:hover {
 
 
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  max-height: 100%;
-  overflow-y: auto;
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+#myImg:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -135,8 +127,8 @@ body {
 .modal-content {
   margin: auto;
   display: block;
-  width: 50%;
-  max-width: 200px;
+  width: 80%;
+  max-width: 700px;
 }
 
 /* Caption of Modal Image */
