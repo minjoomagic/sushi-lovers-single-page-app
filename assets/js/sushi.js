@@ -96,6 +96,8 @@ addSushiForm.addEventListener('submit', function(e){
 sushiForm.reset();
 addSushiForm.style.display = 'none'
 addSushi = false
+addBtn.className = 'btn btn-info btn-lg'
+addBtn.innerText = 'Add a new sushi!'
 
 })
 
