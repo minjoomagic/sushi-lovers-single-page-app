@@ -223,8 +223,7 @@ document.addEventListener('click', function(e) {
     }
     fetch(`http://localhost:3000/sushi/${id}`, config)
     .then(fetchSushi)
-    .then(()=> showAlert("😵😵😵😵😵I don't like this sushi anymore😵😵😵😵😵", 'danger'))
-    // .then(()=> alert(`deleted ${e.target.parentElement.parentElement.innerText}`))
+    .then(() => showAlert("😵😵😵😵😵I don't like this sushi anymore😵😵😵😵😵", 'danger'))
   }
 
 })
