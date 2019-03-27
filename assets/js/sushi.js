@@ -47,6 +47,7 @@ function fetchSushi() {
       console.log('My Sushi', sushi)
       allSushi = sushi
       renderAllSushi(allSushi)
+      dragAndDrop()
     })
 } //end of fetch
 
@@ -85,35 +86,36 @@ function renderOneSushi(sushi) {
 
 // add a new sushi
 const sushiForm = document.querySelector('#sushi-form')
-sushiCont.addEventListener('submit', function(e){
+sushiCont.addEventListener('submit', function(e) {
   e.preventDefault()
-  if(e.target.name.value === '' || e.target.image.value === ''){
+  if (e.target.name.value === '' || e.target.image.value === '') {
     showAlert("😡😡😡You Can't leave any fields blank😡😡😡", 'danger')
-  } else{
+  } else {
 
-  fetch('http://localhost:3000/sushi', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      "name": e.target.name.value,
-      "image": e.target.image.value,
-      "sushilevel": e.target['sushi-mastery-dropdown'].value
-    })
-  }) //end of fetch
-  .then(res => res.json())
-  .then(newSushi => fetchSushi(console.log('this is my new sushi')))
+    fetch('http://localhost:3000/sushi', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          "name": e.target.name.value,
+          "image": e.target.image.value,
+          "sushilevel": e.target['sushi-mastery-dropdown'].value
+        })
+      }) //end of fetch
+      .then(res => res.json())
+      .then(newSushi => fetchSushi(console.log('this is my new sushi')))
+      .then(() => showAlert('Added a new sushi, Mmmm. Go to the bottom to see your new sushi', 'success'))
 
-sushiForm.reset();
-sushiCont.style.display = 'none'
-addSushi = false
-addBtn.className = 'btn btn-info btn-lg'
-addBtn.innerText = 'Add a new sushi!'
+    sushiForm.reset();
+    sushiCont.style.display = 'none'
+    addSushi = false
+    addBtn.className = 'btn btn-info btn-lg'
+    addBtn.innerText = 'Add a new sushi!'
 
   }
-})//end of add a new sushi
+}) //end of add a new sushi
 
 
 //modal
@@ -229,7 +231,6 @@ document.addEventListener('click', function(e) {
 
 //Add alerts when add form validation, add success, delete success
  function showAlert(message, className){
-  console.log('alert')
   const div = document.createElement('div');
   div.className = `alert alert-${className}`;
   div.appendChild(document.createTextNode(message));
@@ -270,7 +271,7 @@ function dragEnd() {
 
 
 
-   
+
 
 
 
