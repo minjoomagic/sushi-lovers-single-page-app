@@ -1,20 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded');
 
+
 //Add a sushi form
 const addBtn = document.querySelector('#add-sushi-btn')
-const addSushiForm = document.querySelector('.container')
+const sushiCont = document.querySelector('.container')
 const editSushiSubmit = document.querySelector('.edit-sushi-submit')
 let addSushi = false
 
 addBtn.addEventListener('click', function(e) {
 addSushi = !addSushi
 if (addSushi) {
-  addSushiForm.style.display = 'block'
+  sushiCont.style.display = 'block'
   addBtn.innerText = 'Close Form'
   addBtn.className = 'btn btn-danger btn-lg'
 } else {
-  addSushiForm.style.display = 'none'
+  sushiCont.style.display = 'none'
   addBtn.className = 'btn btn-info btn-lg'
   addBtn.innerText = 'Add a new sushi!'
 
@@ -60,8 +61,8 @@ function renderAllSushi(allSushi) {
 
 function renderOneSushi(sushi) {
   sushiCollection.innerHTML += `
-  <div class="card">
-    <h3>${sushi.name}</h3>
+  <div class="card" draggable="true">
+    <h3 type='text' name='name'>${sushi.name}</h3>
     <img data-id=${sushi.id} src=${sushi.image}
      alt="For: ${sushi.sushilevel}" class="sushi-image" />
     <h4>For:${sushi.sushilevel}</h4>
@@ -82,11 +83,13 @@ function renderOneSushi(sushi) {
 }
 
 
-
 // add a new sushi
 const sushiForm = document.querySelector('#sushi-form')
-addSushiForm.addEventListener('submit', function(e){
+sushiCont.addEventListener('submit', function(e){
   e.preventDefault()
+  if(e.target.name.value === '' || e.target.image.value === ''){
+    showAlert("😡😡😡You Can't leave any fields blank😡😡😡", 'danger')
+  } else{
 
   fetch('http://localhost:3000/sushi', {
     method: "POST",
@@ -104,11 +107,14 @@ addSushiForm.addEventListener('submit', function(e){
   .then(newSushi => fetchSushi(console.log('this is my new sushi')))
 
 sushiForm.reset();
-addSushiForm.style.display = 'none'
+sushiCont.style.display = 'none'
 addSushi = false
 addBtn.className = 'btn btn-info btn-lg'
 addBtn.innerText = 'Add a new sushi!'
+
+  }
 })//end of add a new sushi
+
 
 //modal
 //info button or image event listener
@@ -155,7 +161,7 @@ document.addEventListener('click', function(e){
       </form>
       </div>
       `
-      
+
 
 
       //edit a sushi
@@ -214,11 +220,62 @@ document.addEventListener('click', function(e) {
       method: "DELETE"
     }
     fetch(`http://localhost:3000/sushi/${id}`, config)
-      .then(fetchSushi)
+    .then(fetchSushi)
+    .then(()=> showAlert("😵😵😵😵😵I don't like this sushi anymore😵😵😵😵😵", 'danger'))
+    // .then(()=> alert(`deleted ${e.target.parentElement.parentElement.innerText}`))
   }
+
 })
+
+//Add alerts when add form validation, add success, delete success
+ function showAlert(message, className){
+  console.log('alert')
+  const div = document.createElement('div');
+  div.className = `alert alert-${className}`;
+  div.appendChild(document.createTextNode(message));
+  const appTitle = document.querySelector('#app-title')
+  const aboveSushiLine = document.querySelector('.above-sushi-line')
+  const appDisplay = document.querySelector('.display-4')
+  // appTitle.insertBefore(div, appDisplay)
+  aboveSushiLine.insertBefore(div, sushiCollection)
+
+
+  //disappear after set amt of seconds
+  setTimeout(()=> document.querySelector('.alert').remove(), 4000)
+
+}//end of alert function
+
+
+
+
+//drag and drop
+
+function dragAndDrop(){
+const sushiCard = document.querySelector('.card')
+
+sushiCard.addEventListener('dragstart', dragStart);
+sushiCard.addEventListener('dragend', dragEnd);
+}
+
+
+
+//drag functions
+function dragStart() {
+  console.log('start')
+}
+
+function dragEnd() {
+  console.log('end')
+}
+
+
+
+   
+
 
 
 fetchSushi();
+
+
 
 }); //end of DOM loader
