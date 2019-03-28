@@ -261,11 +261,13 @@ sushiCard.addEventListener('dragend', dragEnd);
 
 //drag functions
 function dragStart() {
-  console.log('start')
+  this.className += 'hold';
+  setTimeout(()=> this.className = 'invisible', 120);
 }
 
 function dragEnd() {
-  console.log('end')
+  this.className += 'sushiCard';
+
 }
 
 
