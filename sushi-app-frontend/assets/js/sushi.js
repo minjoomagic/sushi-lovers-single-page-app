@@ -41,7 +41,7 @@ if (addSushi) {
     let allSushi;
 
 function fetchSushi() {
-  fetch('http://localhost:3000/sushi')
+  fetch('http://localhost:3000/sushis')
     .then(res => res.json())
     .then(sushi => {
       console.log('My Sushi', sushi)
@@ -92,7 +92,7 @@ sushiCont.addEventListener('submit', function(e) {
     showAlert("😡😡😡You Can't leave any fields blank😡😡😡", 'danger')
   } else {
 
-    fetch('http://localhost:3000/sushi', {
+    fetch('http://localhost:3000/sushis', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
