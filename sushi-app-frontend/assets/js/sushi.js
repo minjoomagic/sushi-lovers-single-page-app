@@ -41,7 +41,7 @@ if (addSushi) {
     let allSushi;
 
 function fetchSushi() {
-  fetch('http://localhost:3000/sushis')
+  fetch('http://localhost:3000/sushi')
     .then(res => res.json())
     .then(sushi => {
       console.log('My Sushi', sushi)
@@ -92,7 +92,7 @@ sushiCont.addEventListener('submit', function(e) {
     showAlert("😡😡😡You Can't leave any fields blank😡😡😡", 'danger')
   } else {
 
-    fetch('http://localhost:3000/sushis', {
+    fetch('http://localhost:3000/sushi', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -233,9 +233,9 @@ document.addEventListener('click', function(e) {
   const div = document.createElement('div');
   div.className = `alert alert-${className}`;
   div.appendChild(document.createTextNode(message));
-  const appTitle = document.querySelector('#app-title')
+  // const appTitle = document.querySelector('#app-title')
   const aboveSushiLine = document.querySelector('.above-sushi-line')
-  const appDisplay = document.querySelector('.display-4')
+  // const appDisplay = document.querySelector('.display-4')
   // appTitle.insertBefore(div, appDisplay)
   aboveSushiLine.insertBefore(div, sushiCollection)
 
