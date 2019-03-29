@@ -40,21 +40,23 @@ if (addSushi) {
 
     let allSushi;
 
-async function fetchSushi() {
+ function fetchSushi() {
   fetch('http://localhost:3000/sushi')
     .then(res => res.json())
     .then(sushi => {
       console.log('My Sushi', sushi)
       allSushi = sushi
       renderAllSushi(allSushi)
-      dragAndDrop()
+      // dragAndDrop()
     })
 } //end of fetch
 
 const sushiCollection = document.querySelector('#sushi-collection')
+const dataList = document.querySelector('#text_editors')
 
 function renderAllSushi(allSushi) {
   sushiCollection.innerHTML = ''
+  dataList.innerHTML = ''
   allSushi.forEach(function(sushi) {
     renderOneSushi(sushi)
   })
@@ -81,7 +83,32 @@ function renderOneSushi(sushi) {
 
 </div>
   `
+  addListNames(sushi)
 }
+
+//name fuzzy suggest(this part is from datalist in index.html near 70-80)
+function addListNames(sushi){
+  const option = document.createElement('option')
+  let regex = /[()]/g;
+  option.value = sushi.name.toLowerCase().replace(regex, "")
+
+  dataList.appendChild(option)
+}
+
+// ////////////////////////////////////////////////*********
+// function showAlert(message, className){
+//  const div = document.createElement('div');
+//  div.className = `alert alert-${className}`;
+//  div.appendChild(document.createTextNode(message));
+//  // const appTitle = document.querySelector('#app-title')
+//  const aboveSushiLine = document.querySelector('.above-sushi-line')
+//  // const appDisplay = document.querySelector('.display-4')
+//  // appTitle.insertBefore(div, appDisplay)
+//  aboveSushiLine.insertBefore(div, sushiCollection)
+
+
+
+
 
 
 // add a new sushi
@@ -250,25 +277,25 @@ document.addEventListener('click', function(e) {
 
 //drag and drop
 
-function dragAndDrop(){
-const sushiCard = document.querySelector('.card')
-
-sushiCard.addEventListener('dragstart', dragStart);
-sushiCard.addEventListener('dragend', dragEnd);
-}
-
-
-
-//drag functions
-function dragStart() {
-  this.className += 'hold';
-  setTimeout(()=> this.className = 'invisible', 120);
-}
-
-function dragEnd() {
-  this.className = 'sushiCard';
-
-}
+// function dragAndDrop(){
+// const sushiCard = document.querySelector('.card')
+//
+// sushiCard.addEventListener('dragstart', dragStart);
+// sushiCard.addEventListener('dragend', dragEnd);
+// }
+//
+//
+//
+// //drag functions
+// function dragStart() {
+//   this.className += 'hold';
+//   setTimeout(()=> this.className = 'invisible', 120);
+// }
+//
+// function dragEnd() {
+//   this.className = 'sushiCard';
+//
+// }
 
 //loading spinner
 function showSpinner(){
@@ -281,6 +308,29 @@ aboveSushiLine.appendChild(p)
   setTimeout(()=> document.querySelector('.spinner').remove(), 2000)
 
 }//end of spinner function
+
+
+//Fuzzy Fuzzy Search  (images)
+let input = document.querySelector('.search')
+
+input.addEventListener('input', fuzzySearch)
+
+function fuzzySearch(e){
+  let regex = /[()]/g;
+  const searchSushi = allSushi.filter(function(sushi){
+    return sushi.name.toLowerCase().replace(regex, "").includes(e.target.value)
+  })
+  console.log(searchSushi)
+  renderAllSushi(searchSushi)
+}//end of Fuzzy Search
+
+
+
+
+
+
+
+
 
 
 

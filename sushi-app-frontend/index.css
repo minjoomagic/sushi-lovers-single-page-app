@@ -241,3 +241,13 @@ body {
 		-webkit-transform:rotate(360deg);
 	}
 }
+
+/* fuzzy fuzzy search */
+.search {
+  margin-left: 50%;
+  width: auto;
+  justify-self: center;
+  border-radius: 5px;
+  height: 2rem;
+  font-family: monospace;
+}
