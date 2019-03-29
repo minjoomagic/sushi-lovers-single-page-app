@@ -314,7 +314,7 @@ aboveSushiLine.appendChild(p)
 }//end of spinner function
 
 
-//Fuzzy Fuzzy Search  (images)
+//Fuzzy Search  (images)
 let input = document.querySelector('.search')
 
 input.addEventListener('input', fuzzySearch)
@@ -356,6 +356,19 @@ document.addEventListener('click', function(e){
 
 })//end of likes
 
+
+
+//Search clear
+
+document.addEventListener('click', function(e){
+  // const clearBtn = document.querySelector('#clear-search-btn')
+  const searchInput = document.querySelector('#search-input')
+  if(e.target.id === 'clear-search-btn'){
+    searchInput.value = ''
+    fetchSushi()
+
+  }
+})
 
 
 
