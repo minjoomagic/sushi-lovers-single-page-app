@@ -69,8 +69,12 @@ function renderOneSushi(sushi) {
     <img data-id=${sushi.id} src=${sushi.image}
      alt="For: ${sushi.sushilevel}" class="sushi-image" />
     <h4>For:${sushi.sushilevel}</h4>
-    <h3><button class="info-btn" data-id=${sushi.id}>Info</button>
-    <button class="delete-btn" data-id=${sushi.id}  >Delete</button></h3>
+    <h3>
+    <button id="likes" class="likes-btn" data-id=${sushi.id}>❤️</button>
+    <button class="info-btn" data-id=${sushi.id}>Info</button>
+    <button class="delete-btn" data-id=${sushi.id}  >Delete</button>
+    Loves: ${sushi.likes}
+    </h3>
   </div>
   <!-- The Modal -->
   <div id="myModal" class="modal">
@@ -242,9 +246,9 @@ document.addEventListener('click', function(e){
 //delete a sushi
 document.addEventListener('click', function(e) {
   const deleteBtn = e.target.className === 'delete-btn'
+  let id = e.target.dataset.id
 
   if (deleteBtn) {
-    let id = e.target.dataset.id
     const config = {
       method: "DELETE"
     }
@@ -325,7 +329,32 @@ function fuzzySearch(e){
 }//end of Fuzzy Search
 
 
+//adding likes
+document.addEventListener('click', function(e){
+  if(e.target.className === 'likes-btn'){
+    const foundSushi = allSushi.find(function(sushi){
+      return sushi.id == e.target.dataset.id
+    })
+  let id = e.target.dataset.id
+  let likeDom = document.querySelector(`[data-id='${foundSushi.id}']`)
+  let likeCount = foundSushi.likes
 
+  likeDom.innerText = `Likes: ${++likeCount}`
+
+  fetch(`http://localhost:3000/sushi/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      "likes": likeCount
+    })
+  }) //end of fetch
+  .then(()=> fetchSushi())
+}
+
+})//end of likes
 
 
 
