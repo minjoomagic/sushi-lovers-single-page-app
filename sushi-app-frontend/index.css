@@ -212,3 +212,32 @@ body {
 .invisible {
   display: none;
 }
+
+
+/* spinning load screen */
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -100px 0 0 -100px;
+	height: 200px;
+	width: 200px;
+	text-indent: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+  -webkit-mask-image: url(./assets/images/spinner.png);
+	background-color: #17a2b8;
+	-webkit-animation-name: spinnerRotate;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: 5s;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spinnerRotate {
+	from {
+		-webkit-transform:rotate(0deg);
+	}
+	to {
+		-webkit-transform:rotate(360deg);
+	}
+}

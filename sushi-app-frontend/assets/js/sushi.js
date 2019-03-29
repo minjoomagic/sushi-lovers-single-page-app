@@ -40,7 +40,7 @@ if (addSushi) {
 
     let allSushi;
 
-function fetchSushi() {
+async function fetchSushi() {
   fetch('http://localhost:3000/sushi')
     .then(res => res.json())
     .then(sushi => {
@@ -266,17 +266,29 @@ function dragStart() {
 }
 
 function dragEnd() {
-  this.className += 'sushiCard';
+  this.className = 'sushiCard';
 
 }
 
+//loading spinner
+function showSpinner(){
+const aboveSushiLine = document.querySelector('.above-sushi-line')
+const p = document.createElement('p');
+  p.className = "spinner";
+aboveSushiLine.appendChild(p)
+
+  //disappear after set amt of seconds
+  setTimeout(()=> document.querySelector('.spinner').remove(), 2000)
+
+}//end of spinner function
 
 
 
 
+showSpinner()
 
+setTimeout(()=> fetchSushi(), 2000)
 
-fetchSushi();
 
 
 
