@@ -1,99 +1,166 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/sketchy/bootstrap.min.css"
+    />
 
-  <title>My Sushi App</title>
+    <title>My Sushi App</title>
 
-  <style>
-  img:hover {
-    animation: shake 0.6s;
-    animation-iteration-count: infinite;
-  }
+    <style>
+      img:hover {
+        animation: shake 0.6s;
+        animation-iteration-count: infinite;
+      }
 
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
-  </style>
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+    </style>
+  </head>
 
-</head>
+  <body>
+    <br />
+    <br />
+    <div id="app-title">
+      <h1 class="display-4 text-center">
+        <i class="fas fa-fish text-primary"></i> Sushi<span class="text-info"
+          >Lovers</span
+        >App
+      </h1>
+    </div>
 
-<body>
-  <br>
-  <br>
-  <div id='app-title'>
+    <div class="container mt-3">
+      <form id="sushi-form">
+        <div class="form-group">
+          <label class="col-form-label col-form-label-lg" for="inputLarge"
+            >Sushi Name</label
+          >
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            name="name"
+            value=""
+            placeholder="Enter Sushi Name here"
+            id="input-name"
+          />
+        </div>
+        <div class="form-group">
+          <label class="col-form-label col-form-label-lg" for="inputLarge"
+            >Image URL</label
+          >
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            name="image"
+            value=""
+            placeholder="Enter Image URL here"
+            id="input-url"
+          />
+        </div>
+        <div class="form-group">
+          <label class="col-form-label col-form-label-lg" for="inputLarge"
+            >Sushi Mastery (What level would this sushi be recommended
+            for?</label
+          >
+          <h5>Sushi Novice(Never tried, 1-2 times)</h5>
+          <h5>Sushi Veteran(Eats regularly but sticks with what they like)</h5>
+          <h5>
+            Sushi Savant(A sushi ninja who can tell the difference in rice
+            acidity and seeks out only the best sushi)
+          </h5>
+          <select
+            class="col-form-label col-form-label-lg"
+            id="sushi-mastery-dropdown"
+            name="sushi-mastery-dropdown"
+          >
+            <option>Sushi Novice</option>
+            <option>Sushi Veteran</option>
+            <option>Sushi Savant</option>
+          </select>
+        </div>
+        <input
+          type="submit"
+          value="🍣 Let's Add a New Sushi 🍣"
+          class="btn btn-info btn-lg"
+          id="add-sushi-submit"
+        />
+        <!--
+          <input type="submit" value="<3 Edit this Sushi <3" class="btn btn-warning btn-lg" id="edit-sushi-submit">
+        -->
+      </form>
+    </div>
 
-  <h1 class="display-4 text-center">
-    <i class="fas fa-fish text-primary"></i>
-    Sushi<span class="text-info">Lovers</span>App</h1>
-  </div>
+    <h3 class="text-center" id="add-sushi-line">
+      I just tried a new sushi!
+      <button id="add-sushi-btn" class="btn btn-info btn-lg">
+        Add a new sushi!
+      </button>
+    </h3>
 
-  <div class="container mt-3">
-    <form id="sushi-form">
-      <div class="form-group">
-        <label class="col-form-label col-form-label-lg" for="inputLarge">Sushi Name</label>
-        <input class="form-control form-control-lg" type="text" name="name" value="" placeholder="Enter Sushi Name here" id="input-name">
+    <div class="search">
+      <input id="search-input" type="text" list="text_editors" />
+      <button id="clear-search-btn" class="clear-btn btn btn-info btn-sm">
+        Clear
+      </button>
+      <datalist id="text_editors"> </datalist>
+      <p><em>SEARCH HERE </em></p>
+    </div>
+
+    <div class="above-sushi-line">
+      <div id="sushi-collection">
+        <!--
+          <div class="card">
+
+          </div>
+        -->
+        <!-- added in js -->
       </div>
-      <div class="form-group">
-        <label class="col-form-label col-form-label-lg" for="inputLarge">Image URL</label>
-        <input class="form-control form-control-lg" type="text" name="image" value="" placeholder="Enter Image URL here" id="input-url">
-      </div>
-      <div class="form-group">
-        <label class="col-form-label col-form-label-lg" for="inputLarge">Sushi Mastery (What level would this sushi be recommended for?</label>
-        <h5>Sushi Novice(Never tried, 1-2 times)</h5>
-        <h5>Sushi Veteran(Eats regularly but sticks with what they like)</h5>
-        <h5>Sushi Savant(A sushi ninja who can tell the difference in rice acidity and seeks out only the best sushi)</h5>
-        <select class="col-form-label col-form-label-lg" id="sushi-mastery-dropdown" name="sushi-mastery-dropdown">
-          <option>Sushi Novice</option>
-          <option>Sushi Veteran</option>
-          <option>Sushi Savant</option>
-        </select>
-      </div>
-      <input type="submit" value="🍣 Let's Add a New Sushi 🍣" class="btn btn-info btn-lg" id="add-sushi-submit">
-      <!-- <input type="submit" value="<3 Edit this Sushi <3" class="btn btn-warning btn-lg" id="edit-sushi-submit"> -->
-    </form>
-  </div>
+    </div>
 
-  <h3 class='text-center' id='add-sushi-line' >I just tried a new sushi! <button id="add-sushi-btn" class="btn btn-info btn-lg">Add a new sushi!</button></h3>
-
-<div class='search'>
-
-  <input id='search-input' type="text" list="text_editors">
-  <button id="clear-search-btn" class="clear-btn btn btn-info btn-sm">Clear</button>
-  <datalist id="text_editors">
-
-
-  </datalist>
-  <p><em>SEARCH HERE
-    </em></p>
-</div>
-
-  <div class="above-sushi-line">
-
-  <div id="sushi-collection">
-    <!-- <div class="card">
-
-    </div> -->
-  <!--added in js  -->
-  </div>
-</div>
-
-  <script type="text/javascript" src="./assets/js/sushi.js"></script>
-</body>
-
+    <script type="text/javascript" src="./assets/js/sushi.js"></script>
+  </body>
 </html>
