@@ -12,21 +12,21 @@
       "name": "Chu-Toro (Med. fat tuna belly)",
       "image": "./assets/images/2-chu-toro.png",
       "sushilevel": "Sushi Novice",
-      "likes": 40
+      "likes": 44
     },
     {
       "id": 3,
       "name": "Toro (Fatty tuna belly)",
       "image": "./assets/images/3-toro.png",
       "sushilevel": "Sushi Veteran",
-      "likes": 17
+      "likes": 20
     },
     {
       "id": 4,
       "name": "Sake (Salmon)",
       "image": "./assets/images/4-sake.png",
       "sushilevel": "Sushi Veteran",
-      "likes": 13
+      "likes": 17
     },
     {
       "id": 5,
