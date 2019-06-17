@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderOneSushi(sushi) {
-    sushiCollection.innerHTML += `
+    sushi.likes
+      ? (sushiCollection.innerHTML += `
   <div class="card" draggable="true">
     <h3 type='text' name='name'>${sushi.name}</h3>
     <img data-id=${sushi.id} src=${sushi.image}
@@ -68,7 +69,31 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="modal-container mt-1">
 
 </div>
-  `;
+  `)
+      : (sushiCollection.innerHTML += `
+<div class="card" draggable="true">
+  <h3 type='text' name='name'>${sushi.name}</h3>
+  <img data-id=${sushi.id} src=${sushi.image}
+   alt="For: ${sushi.sushilevel}" class="sushi-image" />
+  <h4>For:${sushi.sushilevel}</h4>
+  <h3>
+  <button id="likes" class="likes-btn" data-id=${sushi.id}>❤️</button>
+  <button class="info-btn" data-id=${sushi.id}>Info</button>
+  <button class="delete-btn" data-id=${sushi.id}  >Delete</button>
+  Loves: 0
+  </h3>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+<span class="close">&times;</span>
+<img class="modal-content" id="img">
+<h3>
+  <div id="caption"></div>
+</h3>
+<div class="modal-container mt-1">
+
+</div>
+`);
     addListNames(sushi);
   }
 

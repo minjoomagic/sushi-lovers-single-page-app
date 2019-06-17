@@ -5,7 +5,7 @@
       "name": "Maguro (Tuna)",
       "image": "./assets/images/1-maguro.png",
       "sushilevel": "Sushi Novice",
-      "likes": 42
+      "likes": 50
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
       "name": "Sake (Salmon)",
       "image": "./assets/images/4-sake.png",
       "sushilevel": "Sushi Veteran",
-      "likes": 17
+      "likes": 18
     },
     {
       "id": 5,
@@ -54,7 +54,7 @@
       "name": "Ika(Squid)",
       "image": "./assets/images/8-ika.png",
       "sushilevel": "Sushi Savant",
-      "likes": 4
+      "likes": 6
     },
     {
       "id": 9,
@@ -166,7 +166,13 @@
       "name": "Nattomaki(Fermented Soybn Rl)",
       "image": "./assets/images/24-nattomaki.png",
       "sushilevel": "Sushi Savant",
-      "likes": 0
+      "likes": 1
+    },
+    {
+      "name": "sushi hand rolls",
+      "image": "https://i.imgur.com/Tv5Nw3r.jpg",
+      "sushilevel": "Sushi Novice",
+      "id": 25
     }
   ]
 }
